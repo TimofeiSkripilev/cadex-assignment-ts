@@ -10,12 +10,18 @@ const BaseButton = styled(Button, {
   padding: "$2 $3",
   transition: "$bounce",
   textTransform: "none",
-  fontWeight: "$medium",
-  backgroundColor: "$secondary",
-
+  fontWeight: "$semibold",
+  background: "linear-gradient(135deg, $colors$secondaryDark, $colors$primaryDark)",
+  border: "2px solid $textLight", 
+  color: "$textLight",
   "&:hover": {
-    backgroundColor: "$secondaryDark",
-    transform: "translateY(-2px)",
+    transform: "translateY(-2px) scale(1.05)",
+    boxShadow: "0 20px 40px -12px rgba(0, 0, 0, 0.3)",
+    background:
+      "linear-gradient(135deg, $colors$secondaryLight, $colors$primaryLight)",
+  },
+  "&:active": {
+    transform: "translateY(1px)",
   },
 
   variants: {

@@ -5,26 +5,26 @@ import { createTheme as createMuiTheme } from "@mui/material";
 const tokens = {
   colors: {
     // Main colors
-    primary: "#2563eb", // Modern blue
-    primaryLight: "#60a5fa",
-    primaryDark: "#1d4ed8",
-    secondary: "#8b5cf6", // Purple
-    secondaryLight: "#a78bfa",
-    secondaryDark: "#7c3aed",
+    primary: "#6366F1", // Indigo
+    primaryLight: "#818CF8",
+    primaryDark: "#4F46E5",
+    secondary: "#EC4899", // Pink
+    secondaryLight: "#F472B6",
+    secondaryDark: "#DB2777",
     // Background colors
-    background: "#f8fafc",
-    surface: "#ffffff",
-    surfaceAlt: "#f1f5f9",
+    background: "#0F172A", // Dark blue
+    surface: "#1E293B",
+    surfaceAlt: "#334155",
     // Text colors
-    text: "#1e293b",
-    textLight: "#64748b",
-    textInverse: "#ffffff",
+    text: "#F8FAFC", // Almost white
+    textLight: "#CBD5E1",
+    textInverse: "#0F172A", // Dark for contrast on light backgrounds
     // Accent colors
-    accent: "#f59e0b",
-    success: "#10b981",
-    error: "#ef4444",
-    warning: "#f59e0b",
-    info: "#3b82f6",
+    accent: "#F59E0B", // Amber
+    success: "#10B981", // Emerald
+    error: "#EF4444", // Red
+    warning: "#F59E0B", // Amber
+    info: "#3B82F6", // Blue
   },
   space: {
     1: "4px",
@@ -203,10 +203,6 @@ export const fadeIn = keyframes({
   "100%": { opacity: 1 },
 });
 
-const shimmer = keyframes({
-  "0%": { transform: "translateX(-100%)" },
-  "100%": { transform: "translateX(100%)" },
-});
 
 // In stitches.config.ts, update the globalStyles
 export const globalStyles = globalCss({

@@ -17,6 +17,14 @@ const CardsSection = styled("section", {
   backgroundColor: "$surface",
 });
 
+const CardSectionTitle = styled(Typography, {
+  marginBottom: "$4",
+  color: "$textLight",
+  fontWeight: "$bold",
+  position: "relative",
+  zIndex: 1,
+});
+
 const CardGrid = styled(Grid, {
   marginTop: "$3",
 });
@@ -26,14 +34,18 @@ const StyledCard = styled(Card, {
   width: "100%",
   display: "flex",
   flexDirection: "column",
-  transition: "$default",
   cursor: "pointer",
-  backgroundColor: "$surface",
   boxShadow: "$sm",
+  backgroundColor: "$surface",
+  border: "1px solid",
+  borderColor: "$surfaceAlt",
+  backdropFilter: "blur(8px)",
+  transition: "all 0.2s cubic-bezier(0.4, 0, 0.2, 1)",
 
   "&:hover": {
-    transform: "translateY(-4px)",
-    boxShadow: "$md",
+    transform: "translateY(-8px) scale(1.02)",
+    boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.5)",
+    borderColor: "$primary",
   },
 
   "& .MuiCardContent-root": {
@@ -41,9 +53,10 @@ const StyledCard = styled(Card, {
   },
 
   "& .MuiTypography-h5": {
-    color: "$text",
-    fontWeight: "$semibold",
-    marginBottom: "$2",
+    background: "linear-gradient(135deg, $colors$primary, $colors$secondary)",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+    fontWeight: "$bold",
   },
 
   "& .MuiTypography-body2": {
@@ -107,9 +120,9 @@ const Cards: React.FC = () => {
   return (
     <CardsSection>
       <Container>
-        <Typography variant="h2" align="center" gutterBottom>
+        <CardSectionTitle variant="h2" align="center" gutterBottom>
           Also very important title
-        </Typography>
+        </CardSectionTitle>
         <CardGrid container spacing={3}>
           {cardContents.map((card, index) => (
             <Grid item key={index} xs={12} sm={6} md={4}>

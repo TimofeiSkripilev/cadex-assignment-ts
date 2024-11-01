@@ -5,8 +5,11 @@ import { AppBar, Toolbar, Typography, Link } from "@mui/material";
 import ContactButton from "./ContactButton";
 import { styled } from "@/stitches.config";
 const StyledAppBar = styled(AppBar, {
-  backgroundColor: "$primary",
-  boxShadow: "$md",
+  // background: "rgba(15, 23, 42, 0.8)",
+  background: "$background",
+  backdropFilter: "blur(10px)",
+  boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+  borderBottom: "1px solid rgba(255, 255, 255, 0.1)",
 });
 
 const NavLinks = styled("div", {
@@ -28,13 +31,14 @@ const NavLinks = styled("div", {
 });
 
 const LogoLink = styled(Link, {
-  color: "$textInverse",
+  color: "$textLight",
   textDecoration: "none",
-  transition: "$default",
+  fontWeight: "$bold",
+  transition: "color 0.2s ease-in-out",
   padding: "$2",
 
   "&:hover": {
-    opacity: 0.9,
+    color: "$text",
   },
 });
 

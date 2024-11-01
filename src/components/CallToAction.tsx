@@ -6,13 +6,15 @@ import { styled } from "@/stitches.config";
 import ContactButton from "./ContactButton";
 
 const CTASection = styled("section", {
-  background:
-    "linear-gradient(45deg, $colors$primary 0%, $colors$primaryDark 100%)",
+  background: `
+    linear-gradient(45deg, $colors$primary 0%, $colors$secondary 100%),
+    radial-gradient(circle at top right, $colors$primaryLight 0%, transparent 50%)
+  `,
   color: "$textInverse",
   padding: "$7 0",
-  textAlign: "center",
   position: "relative",
   overflow: "hidden",
+  textAlign: "center",
 
   "&::before": {
     content: "",
@@ -31,6 +33,7 @@ const CTATitle = styled(Typography, {
   marginBottom: "$4",
   fontWeight: "$bold",
   position: "relative",
+  color: "$textLight",
   zIndex: 1,
 });
 

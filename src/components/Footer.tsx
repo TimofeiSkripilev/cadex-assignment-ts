@@ -4,8 +4,8 @@ import { Typography, Container } from "@mui/material";
 import { styled } from "../stitches.config";
 
 const FooterSection = styled("footer", {
-  backgroundColor: "$text",
-  color: "$textInverse",
+  backgroundColor: "$background",
+  color: "$text",
   padding: "$4 0",
   position: "relative",
   overflow: "hidden",

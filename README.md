@@ -1,45 +1,120 @@
-# Material UI - Next.js App Router example in TypeScript
+# Modern Landing Page with Material-UI and Stitches
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped using [`create-next-app`](https://github.com/vercel/next.js/tree/HEAD/packages/create-next-app) with Material UI installed.
+A performant, SEO-friendly landing page built with Next.js, Material-UI, and Stitches. Features a dark theme, responsive design, and optimized performance metrics.
 
-## How to use
+## 🚀 Live Demo
 
-Download the example [or clone the repo](https://github.com/mui/material-ui):
+[View Live Demo](https://cadex-assignment-ts.netlify.app)
 
-<!-- #default-branch-switch -->
+## 🛠 Tech Stack
 
-```bash
-curl https://codeload.github.com/mui/material-ui/tar.gz/master | tar -xz --strip=2  material-ui-master/examples/material-ui-nextjs-ts
-cd material-ui-nextjs-ts
-```
+- **Framework**: Next.js 14 (App Router)
+- **UI Library**: Material-UI (MUI)
+- **Styling**: Stitches (CSS-in-JS)
+- **Language**: TypeScript
+- **Deployment**: Netlify
 
-Install it and run:
+## 🔧 Setup & Development
 
-```bash
-npm install
-npm run dev
-```
+1. Clone the repository:
+bash git clone [your-repo-url] cd [your-project-name]
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-or:
+2. Install dependencies:
+bash npm install
 
-<!-- #default-branch-switch -->
 
-[![Edit on StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/mui/material-ui/tree/master/examples/material-ui-nextjs-ts)
+3. Run development server:
+bash npm run dev
 
-[![Edit on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/p/sandbox/github/mui/material-ui/tree/master/examples/material-ui-nextjs-ts)
 
-## Learn more
+4. Open [http://localhost:3000](http://localhost:3000)
 
-To learn more about this example:
+## 📦 Production Deployment
 
-- [Next.js documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Customizing Material UI](https://mui.com/material-ui/customization/how-to-customize/) - approaches to customizing Material UI.
+### Netlify Deployment
 
-## What's next?
+1. Push your code to GitHub
+2. Connect your repository to Netlify
+3. Configure build settings:
+   - Build command: `npm run build`
+   - Publish directory: `.next`
+4. Configure environment variables:
+env NEXT_PUBLIC_BASE_URL=your-production-url
 
-<!-- #default-branch-switch -->
 
-You now have a working example project.
-You can head back to the documentation and continue by browsing the [templates](https://mui.com/material-ui/getting-started/templates/) section.
+## 🎨 Styling Strategy
+
+### Hybrid Approach (MUI + Stitches)
+
+- **Stitches**: Used for custom components and global styles
+  - Tokens system for consistent theming
+  - Performance-optimized CSS-in-JS
+  - Zero-runtime styling where possible
+
+- **Material-UI**:
+  - Component-level styling
+  - Theme customization
+  - Responsive utilities
+
+### Design System
+
+- Consistent spacing scale
+- Dark theme optimization
+- Fluid typography
+- Custom color palette
+- Responsive breakpoints
+- Animation utilities
+
+## 🔍 SEO Optimization
+
+- Next.js App Router metadata
+- Schema.org structured data
+- Semantic HTML
+- Open Graph tags
+- Twitter Cards
+- Sitemap generation
+- Robots.txt configuration
+
+## 🚀 Performance Optimizations
+
+- Server-side rendering
+- Image optimization
+- Font optimization
+- Code splitting
+- Dynamic imports
+- Lazy loading
+- Bundle size optimization
+
+## 🧪 Assumptions & Decisions
+
+### Design Decisions
+- Dark theme by default
+- Mobile-first approach
+- Single-page landing design
+- Minimalist UI/UX
+
+### Technical Decisions
+- App Router over Pages Router
+- Stitches for custom styling
+- MUI for complex components
+- TypeScript for type safety
+
+### Performance Targets
+- Lighthouse score > 90
+- First Contentful Paint < 1.5s
+- Time to Interactive < 3.5s
+
+## 📝 Development Notes
+
+### Component Structure
+src/ ├── app/ # Next.js app router ├── components/ # Reusable components ├── config/ # Configuration files └── styles/ # Global styles & theme
+
+
+### Key Features
+- Responsive hero section
+- Contact form with validation
+- Animated transitions
+- Accessible components
+- Performance monitoring
+- SEO optimization

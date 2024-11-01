@@ -15,7 +15,7 @@ const HeroSection = styled("section", {
   maxWidth: "$maxContentWidth",
   marginX: "auto",
   padding: "$space$4",
-  backgroundColor: "$surfaceAlt",
+  backgroundColor: "$background",
   position: "relative",
   overflow: "hidden",
 
@@ -26,9 +26,11 @@ const HeroSection = styled("section", {
     left: 0,
     right: 0,
     bottom: 0,
-    background:
-      "linear-gradient(45deg, $colors$primaryLight 0%, $colors$primary 100%)",
-    opacity: 0.05,
+    background: `
+      radial-gradient(circle at top right, $colors$primaryLight 0%, transparent 50%),
+      radial-gradient(circle at bottom left, $colors$secondaryLight 0%, transparent 50%)
+    `,
+    opacity: 0.1,
   },
 
   "@lg": {
@@ -48,8 +50,10 @@ const TextContainer = styled("div", {
   zIndex: 1,
 
   "& h1": {
-    fontSize: "4rem",
-    color: "$text",
+    fontSize: "4.5rem",
+    background: "linear-gradient(135deg, $colors$primary, $colors$secondary)",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
     marginBottom: "$4",
     fontWeight: "$bold",
   },
