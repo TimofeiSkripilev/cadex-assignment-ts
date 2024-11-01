@@ -10,13 +10,17 @@ const StyledAppBar = styled(AppBar, {
   boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
   borderBottom: "1px solid rgba(255, 255, 255, 0.1)",
   borderTop: "0px",
-  position: "sticky",
+  position: "fixed !important",
   top: 0,
   zIndex: 1100,
   width: "100%",
   
   "& .MuiToolbar-root": {
-    backgroundColor: "$background",
+    backgroundColor: "transparent",
+    height: "100%",
+    width: "100%",
+    maxWidth: "$maxWidth",
+    margin: "0 auto",
   }
 });
 

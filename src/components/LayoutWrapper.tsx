@@ -39,7 +39,7 @@ export const Main = styled("main", {
   position: "relative",
   zIndex: 1,
   minHeight: `calc(100vh - $sizes$headerHeight - $sizes$footerHeight)`,
-  marginTop: "$headerHeight",
+  marginTop: "$headerHeight !important",
   transition: "opacity 0.2s ease-in",
 
   "&::before": {
