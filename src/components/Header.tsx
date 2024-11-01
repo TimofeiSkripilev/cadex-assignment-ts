@@ -19,12 +19,11 @@ const StyledAppBar = styled(AppBar, {
   height: "$headerHeight",
   display: "flex",
   justifyContent: "center",
-  
 });
 
 const StyledToolbar = styled(Toolbar, {
   width: "100%",
-  padding: "$4 $8 !important",
+  padding: "$4 !important",
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
@@ -53,7 +52,7 @@ const NavLinks = styled("div", {
 });
 
 const LogoLink = styled(Link, {
-  '&.MuiLink-root': {
+  "&.MuiLink-root": {
     color: "$textLight !important",
     textDecoration: "none !important",
     fontWeight: "$bold",

@@ -75,7 +75,6 @@ const tokens = {
     bounce: "all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55)",
   },
   sizes: {
-    maxWidth: "1200px",
     formWidth: "600px",
     headerHeight: "64px",
     footerHeight: "64px",
