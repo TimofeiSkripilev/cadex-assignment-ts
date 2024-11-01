@@ -83,8 +83,8 @@ const SubmitButton = styled(Button, {
 });
 
 const FormTitle = styled(Typography, {
-  marginBottom: "$5",
-  marginTop: "$2",
+  marginBottom: "$5 !important",
+  marginTop: "$2 !important",
   color: "$text",
   fontWeight: "$bold",
   textAlign: "center",
