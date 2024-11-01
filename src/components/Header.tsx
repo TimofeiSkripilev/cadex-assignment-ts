@@ -39,14 +39,17 @@ const NavLinks = styled("div", {
 });
 
 const LogoLink = styled(Link, {
-  color: "$textLight",
-  textDecoration: "none",
-  fontWeight: "$bold",
-  transition: "color 0.2s ease-in-out",
-  padding: "$2",
+  '&.MuiLink-root': {
+    color: "$textLight !important",
+    textDecoration: "none !important",
+    fontWeight: "$bold",
+    transition: "color 0.2s ease-in-out",
+    padding: "$2",
 
-  "&:hover": {
-    color: "$text",
+    "&:hover": {
+      color: "$text !important",
+      textDecoration: "none !important",
+    },
   },
 });
 
