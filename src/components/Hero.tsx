@@ -51,7 +51,7 @@ const TextContainer = styled("div", {
 
   "& h1": {
     fontSize: "4.5rem",
-    background: "linear-gradient(135deg, $colors$primary, $colors$secondary)",
+    background: "linear-gradient(135deg, $colors$primaryLight, $colors$secondaryLight)",
     WebkitBackgroundClip: "text",
     WebkitTextFillColor: "transparent",
     marginBottom: "$4",

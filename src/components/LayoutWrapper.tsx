@@ -2,8 +2,8 @@
 
 import React from "react";
 import { styled, fadeIn } from "@/stitches.config";
-import { LoadingSkeleton } from "./LoadingSkeleton";
 import { globalStyles } from "@/stitches.config";
+import { LoadingSkeleton } from "./LoadingSkeleton";
 
 export const LayoutWrapper = styled("div", {
   minHeight: "100vh",
@@ -12,7 +12,8 @@ export const LayoutWrapper = styled("div", {
   backgroundColor: "$background",
   position: "relative",
   opacity: 0,
-  animation: `${fadeIn} 0.2s ease-in forwards`,
+  animation: `${fadeIn} 0.1s ease-in forwards`,
+  overflowX: "hidden",
 
   variants: {
     loading: {
@@ -24,7 +25,7 @@ export const LayoutWrapper = styled("div", {
       false: {
         "& > *": {
           opacity: 1,
-          transition: "opacity 0.2s ease-in",
+          transition: "opacity 0.1s ease-in",
         },
       },
     },
@@ -38,6 +39,7 @@ export const Main = styled("main", {
   position: "relative",
   zIndex: 1,
   minHeight: `calc(100vh - $sizes$headerHeight - $sizes$footerHeight)`,
+  marginTop: "$headerHeight",
   transition: "opacity 0.2s ease-in",
 
   "&::before": {
@@ -63,17 +65,18 @@ export function LayoutWrapperComponent({
 }: LayoutWrapperComponentProps) {
   const [isLoading, setIsLoading] = React.useState(true);
 
+  //we have a skeleton and a delay, this can illustrate a heavier website with slower loading
   React.useEffect(() => {
     globalStyles();
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 200);
+    }, 50);
     return () => clearTimeout(timer);
   }, []);
 
-  if (isLoading) {
-    return <LoadingSkeleton />;
-  }
-
-  return <LayoutWrapper loading={false}>{children}</LayoutWrapper>;
+  return (
+    <>
+      {isLoading ? <LoadingSkeleton /> : children}
+    </>
+  );
 }

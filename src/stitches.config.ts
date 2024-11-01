@@ -222,9 +222,12 @@ export const globalStyles = globalCss({
   body: {
     opacity: 1,
     transition: "opacity 0.2s ease-in",
+    '&.loading': {
+      overflow: 'hidden',
+    },
   },
   ".fade-in": {
-    animation: `${fadeIn} 0.2s ease-in forwards`,
+    animation: `${fadeIn} 0.1s ease-in forwards`,
   },
 });
 
