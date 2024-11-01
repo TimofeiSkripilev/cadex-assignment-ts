@@ -13,7 +13,7 @@ const HeroSection = styled("section", {
   minHeight: "$heroMinHeight",
   width: "100%",
   marginX: "auto",
-  padding: "$space$4",
+  padding: "$8 $4 $4",
   backgroundColor: "$background",
   position: "relative",
   overflow: "hidden",
@@ -44,7 +44,7 @@ const HeroSection = styled("section", {
 const TextContainer = styled("div", {
   maxWidth: "700px",
   textAlign: "center",
-  padding: "$4",
+  padding: "$6 $4 $4",
   position: "relative",
   zIndex: 1,
 
