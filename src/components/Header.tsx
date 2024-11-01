@@ -5,14 +5,19 @@ import { AppBar, Toolbar, Typography, Link } from "@mui/material";
 import ContactButton from "./ContactButton";
 import { styled } from "@/stitches.config";
 const StyledAppBar = styled(AppBar, {
-  background: "$background",
+  background: "$background !important", // Add !important
   backdropFilter: "blur(10px)",
   boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
   borderBottom: "1px solid rgba(255, 255, 255, 0.1)",
+  borderTop: "0px",
   position: "sticky",
   top: 0,
   zIndex: 1100,
   width: "100%",
+  
+  "& .MuiToolbar-root": {
+    backgroundColor: "$background",
+  }
 });
 
 const NavLinks = styled("div", {
