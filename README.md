@@ -17,7 +17,7 @@ A performant, SEO-friendly landing page built with Next.js, Material-UI, and Sti
 ## 🔧 Setup & Development
 
 1. Clone the repository:
-bash git clone [your-repo-url] cd [your-project-name]
+bash git clone https://github.com/TimofeiSkripilev/cadex-assignment-ts.git cd cadex-assignment-ts
 
 
 2. Install dependencies:
