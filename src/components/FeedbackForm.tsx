@@ -17,6 +17,7 @@ const FormWrapper = styled(Paper, {
   width: "100%",
   maxWidth: "$formWidth",
   margin: "0 auto",
+  marginTop: "$4",
   backgroundColor: "$surface",
   backdropFilter: "blur(16px)",
   border: "1px solid rgba(255, 255, 255, 0.1)",
@@ -83,6 +84,7 @@ const SubmitButton = styled(Button, {
 
 const FormTitle = styled(Typography, {
   marginBottom: "$5",
+  marginTop: "$2",
   color: "$text",
   fontWeight: "$bold",
   textAlign: "center",

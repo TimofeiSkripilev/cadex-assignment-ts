@@ -6,6 +6,7 @@ import FeedbackForm from "@/components/FeedbackForm";
 
 const ContactSection = styled("section", {
   padding: "$5 0",
+  paddingTop: "$4",
   backgroundColor: "$background",
   minHeight: "100vh",
 });
