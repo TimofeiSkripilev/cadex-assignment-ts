@@ -12,7 +12,6 @@ const HeroSection = styled("section", {
   justifyContent: "flex-start",
   minHeight: "$heroMinHeight",
   width: "100%",
-  maxWidth: "$maxContentWidth",
   marginX: "auto",
   padding: "$space$4",
   backgroundColor: "$background",

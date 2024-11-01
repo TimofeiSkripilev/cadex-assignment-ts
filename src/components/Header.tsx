@@ -12,20 +12,30 @@ const StyledAppBar = styled(AppBar, {
   borderTop: "0px",
   position: "fixed !important",
   top: 0,
+  left: 0,
+  right: 0,
   zIndex: 1100,
   width: "100%",
+  height: "$headerHeight",
+  display: "flex",
+  justifyContent: "center",
   
-  "& .MuiToolbar-root": {
-    backgroundColor: "transparent",
-    height: "100%",
-    width: "100%",
-    maxWidth: "$maxWidth",
-    margin: "0 auto",
-  }
+});
+
+const StyledToolbar = styled(Toolbar, {
+  width: "100%",
+  padding: "$4 $8 !important",
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  height: "100%",
+});
+
+const StyledNav = styled("nav", {
+  width: "100%",
 });
 
 const NavLinks = styled("div", {
-  marginLeft: "auto",
   display: "flex",
   alignItems: "center",
   gap: "$3",
@@ -59,8 +69,8 @@ const LogoLink = styled(Link, {
 
 const Header: React.FC = () => (
   <StyledAppBar position="sticky" role="banner">
-    <nav aria-label="Main navigation">
-      <Toolbar>
+    <StyledNav aria-label="Main navigation">
+      <StyledToolbar>
         <LogoLink href="/" aria-label="Home">
           <Typography variant="h6" component="span">
             Some Company
@@ -69,8 +79,8 @@ const Header: React.FC = () => (
         <NavLinks>
           <ContactButton />
         </NavLinks>
-      </Toolbar>
-    </nav>
+      </StyledToolbar>
+    </StyledNav>
   </StyledAppBar>
 );
 
